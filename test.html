@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Slider</title>
+	<style type="text/css">
+		#slider-wrap{
+			width: 660px;
+		}
+		#slider{
+			width: 640px;
+			height: 320px;
+			overflow: hidden;
+			border: #eee solid 10px;
+			position: relative;
+		}
+		.slide{
+			width:100%;
+			height:100%;
+		}
+		.sli-links{
+			margin-top: 10px;
+			text-align: center;
+		}
+		.sli-links .control-slide{
+			margin: 2px;
+			display: inline-block;
+			width: 16px;
+			height: 16px;
+			overflow: hidden;
+			text-indent: -9999px;
+			background: url(radioBg.png) center bottom no-repeat;
+		}
+		.sli-links .control-slide:hover{
+			cursor: pointer;
+			background-position: center center;
+		}
+		.sli-links .control-slide.active{
+			background-position: center top;
+		}
+		#prevbutton, #nextbutton{
+			display: block;
+			width: 15px;
+			height: 100%;
+			position: absolute;
+			top: 0px;
+			overflow: hidden;
+			text-indent: -9999px;
+			background: url(arrowBg.png) left center no-repeat;
+			opacity: 0.5;
+			z-index: 3;
+			outline: none !important;
+		}
+		#prevbutton{
+			left:10px;
+		}
+		#nextbutton{
+			right: 10px;
+			background: url(arrowBg.png) right center no-repeat;
+		}
+		#prevbutton:hover, #nextbutton:hover{
+			opacity: 1;
+		}
+	</style>
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="slider.js"></script>
+</head>
+<body>
+	<div id="slider-wrap">
+		<div id="slider">
+			<div class="slide"><img src="640x320_1.jpg" width="640" height="320"></div>
+			<div class="slide"><img src="640x320_2.jpg" width="640" height="320"></div>
+			<div class="slide"><img src="640x320_3.jpg" width="640" height="320"></div>
+		</div>
+	</div>		
+</body>
+</html>
